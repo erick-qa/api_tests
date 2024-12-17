@@ -10,3 +10,4 @@ node_modules/
 
 # Ignorar arquivos temporários ou de ambiente
 .env
+h origin main
