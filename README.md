@@ -31,22 +31,23 @@ Antes de rodar os testes, é necessário instalar as dependências. O projeto fo
 
 2. Instale as dependências necessárias com o comando:
 
-```bash
-npm install
+   ```bash
+   npm install
+   
 Isso instalará o Cypress, o Faker e o cypress-plugin-api, além de outras dependências definidas no package.json.
 
 Executando os Testes
 1. Modo interativo (Cypress UI)
 Para rodar os testes no modo interativo (onde você pode ver os testes sendo executados na interface gráfica do Cypress), use o comando:
 
-```bash
-npx cypress open
+   ```bash
+   npx cypress open
 
 2. Modo headless (sem interface gráfica)
 Para rodar os testes sem a interface gráfica (modo headless), execute o seguinte comando:
 
-```bash
-npx cypress run
+   ```bash
+   npx cypress run
 
 Estrutura do Projeto
 A estrutura do projeto é a seguinte:
