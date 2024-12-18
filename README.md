@@ -52,29 +52,3 @@ Para rodar os testes sem a interface gráfica (modo headless), execute o seguint
 Estrutura do Projeto
 A estrutura do projeto é a seguinte:
 
-
-/api_tests
-├── /cypress
-│   ├── /fixtures
-│   ├── /integration
-│   │   └── users.spec.js  # Arquivo de testes
-│   ├── /plugins
-│   └── /support
-├── /node_modules
-├── package.json  # Dependências e scripts do projeto
-└── cypress.json   # Configurações do Cypress
-
-Dependências
-As dependências do projeto estão listadas no arquivo package.json:
-
-json
-Copiar código
-{
-  "devDependencies": {
-    "cypress": "^13.16.1"
-  },
-  "dependencies": {
-    "@faker-js/faker": "^9.3.0",
-    "cypress-plugin-api": "^2.11.2"
-  }
-}
