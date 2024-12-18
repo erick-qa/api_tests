@@ -1,0 +1,38 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches:
+      - main    # Acionar os testes quando houver push para a branch "main"
+  pull_request:
+    branches:
+      - main    # Acionar os testes quando houver pull request para a branch "main"
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest  # Definir o sistema operacional para rodar os testes (ubuntu neste caso)
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3  # Faz checkout do código no repositório
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3  # Configura o Node.js
+      with:
+        node-version: '16'  # Especifique a versão do Node.js que você está usando
+
+    - name: Install dependencies
+      run: |
+        npm install  # Instala as dependências do projeto
+
+    - name: Run Cypress tests
+      run: |
+        npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,html=true,json=true,charts=true
+        # Comando para rodar os testes no Cypress
+
+    - name: Upload Mochawesome report
+      uses: actions/upload-artifact@v3
+      with:
+        name: mochawesome-report
+        path: cypress/reports
+        # Faz upload do relatório gerado para ser acessado no GitHub
