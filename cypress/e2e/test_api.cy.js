@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-describe("GET /api/users", () => {
+describe("Api Tests", () => {
   let totalPages;
   let randomUserId;
 
