@@ -49,6 +49,3 @@ Para rodar os testes sem a interface gráfica (modo headless), execute o seguint
    ```bash
    npx cypress run
 
-Estrutura do Projeto
-A estrutura do projeto é a seguinte:
-
